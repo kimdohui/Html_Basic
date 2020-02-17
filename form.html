@@ -1,0 +1,42 @@
+<form action="서버 프로그램">
+    <input type="text" title="검색">
+    <input type="submit" value="검색">
+</form>
+
+<!--submit 은 제출 버튼-->
+<!--form은 사용자가 웹 사이트ㅡ로 정보르르 보낼 수 있는 요소이다.-->
+<!--autocomplete 는 자동 완성 기능으로 기본값은 on이다. 하지만 비번 같은 중요한 요소는 autocomplete로 조정 가능하다 아래예시 참고!-->
+<form action="서버 프로그램" autocomplete="off"></form>
+
+
+<!--1번-->
+<label>레이블(input태그 이름) <input type="text"></label>
+<!--lable태그(입력창 옆에 붙여 놓은 텍스트)는 폼 요소의 레이블을 붙이기 위한 것이다.-->
+
+<!--2번-->
+<label for="user">
+    <input type="text" id="user">
+</label>
+
+<label><input type="radio">클릭</label>
+<input type="radio">클릭2
+
+
+<!--label을 사용한 클릭 같은 경우 글자를 클릭해도 클릭이 인식되지만 label을 사용하지 않은 클릭2 같은 경우 인식이 되지 않는다.-->
+
+<fieldset>
+    <legend>개인 정보</legend>
+    <ul>
+        <li>
+            <label >이름<input type="text"></label>
+        </li>
+        
+        <li>
+            <label >전화번호<input type="text"></label>
+        </li>
+    </ul>
+</fieldset>
+
+<!--
+    fieldset 태그는 태그 사이 폼들을 하나의 영역으로 묶고 외각선을 그려주며 legend태그는 fieldset태그로 묶은 그룹에 제목을 붙여준다.
+-->
