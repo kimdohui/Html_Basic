@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function percent()
+        {
+            document.getElementById('progress').value = '100';
+        }
+    </script>
+</head>
+<body>
+<input type="submit" value="전송">
+<button type="submit">전송</button>
+<!--비슷한 형태의 전송 버튼(하나는 input , 하나는 button)-->
+<!--차이라면 화면 낭독기가 button태그를 만나면 이부분에 버튼이 있다는걸 알고 정확히 전달이 가능하다. 
+    또한 button태그는 콘텐츠를 포함할 수 있어서 아이콘을 추가할 수 있고 css로 꾸밀 수 있다.-->
+
+<!--button태그의 속성은 submit(폼을 서버로 전송) , reset(폼 내용 초기화) 가 있다.-->
+
+
+<form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+    <input type="number" name="num1" value="0">
+    +<input type="number" name="num2" value="0">
+    =<output name="result"></output>
+</form>
+
+<!--output 태그는 입력 값의 계산 결과를 알려준다.(정확히는 계산 결과 값을 일반 텍스트가 아닌 결과값 자체(숫자)로 인식)-->
+<!--form oninput는 사용자가 요소의 값을 입력,변경시 실행되며 -->
+
+<!--위에 form태그에 사용된 oninput="result.value=parseInt(num1.value)+parseInt(num2.value)는 자바스크립트 함수로 두 수의 합을 구하는 함수이다.-->
+<!--parseInt(num1.value),parseInt(num2.value)는 각각 첫번,두번째 필드에 입력된 값을 정수로 바꿔주는 함수이고
+    result.value는 필드의 세번째 값(첫번,두번째 값을 더한 값)이다-->
+
+<ul>
+    <li>
+        <label>게이지</label>
+        <!--전체 60초 중 50초 진행
+        <progress value="50" max="60"></progress>
+        -->
+        <progress value="0" max="100" id="progress"></progress>
+    </li>
+</ul>
+
+<button onclick="percent()">게이지 상승</button>
+<!--progress태그는 진행 상태를 보여주는 태그이며 작업 시작을 0으로 하고 최종 완료를 최댓값(max)로 표기함, value는 현재 진행 상태를 나타냄-->
+
+<ul>
+    <li>
+        <label>점유율 0.8</label>
+        <meter value="0.8"></meter>
+    </li>
+
+    <li>
+        <label>사용율 50%</label>
+        <meter min="0" max="100" value="50"></meter>
+    </li>
+
+    <li>
+        <label>용량 초과</label>
+        <meter min="1000" max="2000" low="1100" high="1800" value="1900"></meter>
+    </li>
+
+    <li>
+        <label>적정 트래픽</label>
+        <meter value="0.5" optimum="0.8"></meter>
+    </li>
+</ul>
+
+<!--meter는 값이 차지하는 크기를 표기하는 태그로 progress와 달리 전체 크기 중 얼마나 차지하는지 표현할 때 사용된다.(진행도 보다는 사용량, 전체 참여도등)-->
+<!--meter의 속성은 아래 참고
+    
+    min,max  최댓값, 최솟값 지정
+    value  범위 내에서 차지하는 값
+    low  "이정도면 낮다"라고 할 정도의 값
+    high "이정도면 높다"라고 할 정도의 값
+    optimum "이정도면 적당하다"라고 할 정도의 범위
+-->
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<label class="Class" for="class_select">학과</label>
+<select id="class_select">
+    <optgroup label="문과">                        <!--optgroup은 여러개의 option태그를 묶을때 사용된다.-->
+        <option value="korean" selected>국어</option>
+        <option value="history">역사</option>
+        <option value="english">영어</option>
+    </optgroup>
+    <optgroup label="이과">
+        <option value="science">과학</option>
+        <option value="math">수학</option>
+    </optgroup>
+</select>
+
+<!--select 태그는 드롭다운 목록의 시작과 끝을 담당하고 option은 항목들을 추가할때 사용된다.-->
+
+<!--select 태그를 사용해 만든 드롭다운은 기본적으로 1가지 선택 가능 이때 size(화면에 보이는 option개수), multiple(다중 선택 가능)-->
+<!--option 태그에서는 value(옵션 선택 시 서버로 넘길 값 지정) , selected(화면에 표시일때 기본적으로 선택되있는 옵션 지정) 속성들이 있다.-->
+
+<!--shift클릭 후 선택시 다중 선택이 가능-->
+
+
+<input type="text" id="interest" list="choices">
+<datalist id="choices">
+    <option value="gym" label="체육"></option>
+    <option value="music" label="음악"></option>
+    <option value="art" label="미술"></option>
+</datalist>
+
+<!--datalist 태그 사용시 데이터 목록 중 값을 선택하도록 할 수 있다.(select와 다르게 직접 입력이 가능하며 밑에 목록이 뜨는데 클릭시 자동 완성기능이 있다.)-->
+<!--datalist 태그 내의 option은 value와 label(옆에 목록 이름이 표시됨)-->

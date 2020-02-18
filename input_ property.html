@@ -1,0 +1,28 @@
+<label for="name">이름</label>
+<input type="text" id="name" autofocus required placeholder="이름">
+
+<!--autofocus 사용 시 웹 페이지 로딩시 해당 input에 마우스 커서가 표시된다.-->
+<!--required는 사용자가 아무것도 입력하지 않았을때 알람이 뜨게 한다.(필수 입력 사항일때 사용)-->
+<!--placeholder 사용시 로딩했을때 input태그에 원하는 내용을 적을 수 있다.(input태그 클릭시 내용은 사라짐)-->
+
+<label for="time">시간</label>
+<input type="text" id="time" value="2시28분" readonly>
+
+<!--readonly사용시 value로 지정한 값을 읽기만 할 수 있다.-->
+
+<label><input type="text" name="ID" id="ID" size="10" minlength="5" maxlength="15"></label>
+<small style="color: red;">5~15자리 이내의 영문과 숫자</small>
+
+<!--size는 칸 사이즈, minlength는 최소 입력값 , maxlength는 최대 입력값-->
+<!--small 태그는 조그만 글자를 나타냄-->
+
+<!--이 외에도 사용가능한 속성
+    
+    formaction  실행할 프로그램 연결(type="submit"이나 type="image"일때 사용)
+    formenctype 서버로 폼 전송시 어떤 방식으로 해석할지 지정(type="submit"이나 type="image"일때 사용)
+    formmethod  서버로 폼을 전송하는 방식(get,post) 지정(type="submit"이나 type="image"일때 사용)
+    formnovalidate  유효성의 여부 표시
+    formtarget  폼 데이터를 서버로 전송한 후 서버의 응답을 어디에 표시할지 타깃 지정
+    height,width  type="image"일때 이미지의 너비와 높이 지정
+    list      <datalist>에 정의해놓은 옵션값을 <input> 안에 나열하여 보여줌
+    multiple  type="email"이나 type="file"일때 두 개 이상의 값을 입력-->

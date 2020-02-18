@@ -40,3 +40,25 @@
 <!--
     fieldset 태그는 태그 사이 폼들을 하나의 영역으로 묶고 외각선을 그려주며 legend태그는 fieldset태그로 묶은 그룹에 제목을 붙여준다.
 -->
+
+<input type="submit" value="전송">
+<button type="submit">전송</button>
+<!--비슷한 형태의 전송 버튼(하나는 input , 하나는 button)-->
+<!--차이라면 화면 낭독기가 button태그를 만나면 이부분에 버튼이 있다는걸 알고 정확히 전달이 가능하다. 
+    또한 button태그는 콘텐츠를 포함할 수 있어서 아이콘을 추가할 수 있고 css로 꾸밀 수 있다.-->
+
+<!--button태그의 속성은 submit(폼을 서버로 전송) , reset(폼 내용 초기화) 가 있다.-->
+
+
+<form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+    <input type="number" name="num1" value="0">
+    +<input type="number" name="num2" value="0">
+    =<output name="result"></output>
+</form>
+
+<!--output 태그는 입력 값의 계산 결과를 알려준다.(정확히는 계산 결과 값을 일반 텍스트가 아닌 결과값 자체(숫자)로 인식)-->
+<!--form oninput는 사용자가 요소의 값을 입력,변경시 실행되며 -->
+
+<!--위에 form태그에 사용된 oninput="result.value=parseInt(num1.value)+parseInt(num2.value)는 자바스크립트 함수로 두 수의 합을 구하는 함수이다.-->
+<!--parseInt(num1.value),parseInt(num2.value)는 각각 첫번,두번째 필드에 입력된 값을 정수로 바꿔주는 함수이고
+    result.value는 필드의 세번째 값(첫번,두번째 값을 더한 값)이다-->
