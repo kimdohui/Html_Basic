@@ -1,0 +1,37 @@
+*{margin: 0; padding: 0;}
+/*전체 선택자(웹 문서 전체 마진과 패딩을 0으로 지정할 수 있다.)*/
+
+p{
+    font-size: 10px;
+    font-family: Arial;}
+
+/*태그 선택자(특정 태그를 사용한 요소에 스타일 적용하기)*/
+
+.name
+{
+    color: black;
+}
+
+#name
+{
+    color: black;
+}
+
+
+/*.은 class선택자 , #은 id선택자이다.(id 선택자는 class 선택자와 다르게 문서 안에서 한번만 적용할 수 있다.)*/
+
+h2.name{
+    color: red;
+}
+
+/*위와 같은 경우 name이라는 class를 가지고 있는 h2태그만 적용된다.*/
+
+/*또한 특정 요소만 적용하고 싶은 경우 span을 사용하면 된다.*/
+
+
+h1,h2{
+    text-align: center;
+}
+
+/*중복되는 선택자인 경우 쉼표를 사용해 주면 된다.*/
+
