@@ -1,0 +1,42 @@
+p{direction: ltr;}
+/*direction은 글자 쓰기 방향 지정 속성으로 ltr(왼쪽에서 오른쪽으로_기본값),rtl(오른쪽에서 왼쪽으로)가 있다.*/
+
+p{text-align: center;}
+/*text-align 은 텍스트 정렬로 여러가지 속성이 있다.
+
+start     현재  텍스트 줄의 시작 위치에 맞춰 문단을 정렬(left-to-right면 왼쪽으로, right-to-left는 오른쪽으로 맞춰 정렬)
+end       현재 텍스트 줄의 끝 위치에 맞춰 문단을 정렬(start와 반대)
+left      왼쪽에 맞추어 문단 정렬
+right     오른쪽에 맞추어 문단 정렬
+center    가운데에 맞추어 문단 정렬
+justify   양쪽에 맞추어 문단을 정렬
+match-parent  부모 요소를 따라 문단 정렬
+*/
+
+p{text-justify: auto;}
+/*text-align 속성이 justify일 경우 양쪽 끝에 맞춰서 글자와 단어 사이 간격이 어색할 수 있는데 이때 간격을 조절하는 속성이다.
+
+auto   자동 지정
+none   정렬하지 않음
+inter-word   단어 사이의 공백을 조절해 정렬
+distribute  인접한 글자 사이의 공백을 똑같이 맞추어 정렬
+*/
+
+p{text-indent: 16px;}
+/*text-indent는 텍스트 들여 쓰기 속성으로 크기나 백분율로 크기를 지정 가능하다.(백분율인 경우 부모의 크기가 달라지면 자식도 달라진다.)*/
+
+
+p{line-height: normal;}
+/*line-height는 줄 간격 조절하는 속성이다. 크기는 normal,숫자,크기,백분율로 지정할 수 있다.*/
+
+
+p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;}
+/*white-space:nowrap사용시 텍스트가 기준선을 넘어가 넘칠 수 있는데 이걸 어떻게 처리할지 지정하는게 text-overflow속성이다.
+
+clip  넘치는 텍스트를 자름
+ellipsis  말 줄임표로 잘린 텍스트가 있다고 표시
+
+단 overflow속성이 hidden(넘추는 부분 가림)이거나 ,scroll,auto 면서 white-space:nowrap 속성을 함께 사용했을 경우에만 적용된다.*/

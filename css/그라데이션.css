@@ -1,0 +1,96 @@
+body{background: linear-gradient(to left top,blue,white);}/*현재 표기법*/
+/*위는 선형 그라데이션으로 (각도 to 방향,처음 색, 나중 색)으로 채워넣을 수 있다. 아래는 방향 지시법(to가 붙는다)
+- 위 left top 은 왼쪽 위부터 파란색으로 시작해 right bottom방향으로 점점 하얘진다는 소리
+
+
+to top      아래에서 시작해 위로 그라데이션이 만들어짐
+to left     오른쪽에서 시작해 왼쪽으로 그려지는 그라데이션
+to right    left와 반대
+to bottom   top과 반대
+
+과거
+그라데이션은 css3 속성이라 이를 지원 가능한 모던 브라우저에서만 사용 가능해서 접두사를 붙여주어야 한다.
+
+-webkit- 웹키트 방식 브라우저용(사파리,크롬 등)
+-moz-- 게코 방식 브라우저(모질라, 파이어 폭스)     / 키워드 to 사용 안함
+-o-  오페라 브라우저     / 키워드 to 사용 안함
+
+*/
+
+
+body{background: linear-gradient(45deg,blue,white);}
+/*deg는 각도로 시계방향으로 90,180,270,0(x,y축이 있다고 생각하고 맨 위를 0이라 생각) 순이다.
+-참고로 이 각도는 끝부분 각도이다.(예를 들어 90deg ,blue , white면 90 방향으로 갈 수록 점점 파랑에서 하양으로 변한다.
+
+         0
+         |
+         |
+270 -------------   90
+         |
+         |
+        180
+*/
+
+
+body{background: linear-gradient(to bottom,blue,white 30%, pink);}
+/*위는 색상 중지점(색이 바뀌는 부분)과 관련되어있는데 이 색상 중지점을 지정할때는 색상만 지정할 수 있고 색상과 함께 점의 위치도 지정할 수 있다.
+위를 예를 들어 설명하자면
+
+바닥으로 가는 그라데이션인데 시작색상은 파랑이고 중간점을 30%지점으로 흰색으로 바꾼다음 중간점 아래부분을 분홍으로 한다라는 소리임
+(즉 30%지점이 흰색으로 바뀌어있는, 위(파랑)에서 아래(핑크)로 가는 그라데이션)
+*/
+
+
+
+body{background: radial-gradient(circle,white,yellow,red);}
+/*위는 원형 그라데이션으로 원의 중심부터 바깥방향으로 색상이 바뀌는 그라데이션이다. 만약 위에서 circle이라 지정하지 않으면 타원모양 그라데이션이 된다.
+그라데이션은 안쪽부터 흰,노랑,빨강 순으로 그려진다.
+*/
+
+body{background: radial-gradient(circle at 10% 10%, white, blue);}
+/*위는 원형 그라데이션의 각도인데(초기 모듈(moz,o등) 순서가 (at생략)각도,모양 순 이다) 사용값은 키워드(left,top등) 이나 백분율이다.
+
+백분율은 왼쪽 위부터 시작된다.
+(0,0)
+-------------
+|
+|
+|
+*/
+
+
+
+body{background: radial-gradient(circle closet-side at 30% 40%, white, yellow, green);}
+/*closet-side 속성을 사용할 경우 그라데이션 가장자리가 중심에서 가장 가까운 모서리(변)와 만나게(타원은 수평축이나 수직축)될때까지 그라데이션을 그림*/
+
+body{background: radial-gradient(circle closet-corner at 30% 40%, white, yellow, green);}
+/*closet-side 속성을 사용할 경우 그라데이션 가장자리가 중심에서 가장 가까운 코너와 만나게될때까지 그라데이션을 그림*/
+
+body{background: radial-gradient(circle farthest-side at 30% 40%, white, yellow, green);}
+/*closet-side 속성을 사용할 경우 그라데이션 가장자리가 중심에서 가장 먼 모서리(변)와 만나게 될때까지 그라데이션을 그림*/
+
+body{background: radial-gradient(circle farthest-corner at 30% 40%, white, yellow, green);}
+/*closet-side 속성을 사용할 경우 그라데이션 가장자리가 중심에서 가장 먼 코너와 닿게 그림_ 기본값*/
+
+
+
+
+body{
+    background: repeating-linear-gradient(yellow,red 20px);
+    background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+}
+/*위와 같은 경우 그라데이션을 반복할때 사용하는 속성인데 노랑과 빨강을 20px씩 선형형태로 패턴을 반복한다. 단 이렇게 사용할 경우
+빨강과 노랑이 만나는 부분에 주황 그라데이션이 생기고 마는데 이럴땐 시작 색상과 끝 색상을 명확히 구분해주면 색상이 섞이지 않는다.
+
+(아래를 보면 바깥쪽에 yellow와 red 40px은 전체 적인 색 종류와 크기를 , 안에 yellow 20px , red 20px은 아까 지정한 것을 어떻게 채울까를 지정해준다.)
+
+*/
+
+
+
+body{
+    background: repeating-radial-gradient(circle,white,gray 10%);
+    background: repeating-radial-gradient(circle, white,white 10%,gray 10%,gray,20%);
+}
+
+/*원형도 선형과 동일하다. 아래 지정문처럼 자세히 지정해주면 좀 더 뚜렷한 그라데이션을 만들 수 있다.*/
