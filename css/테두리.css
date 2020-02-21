@@ -1,0 +1,62 @@
+h1{border-style: none;}
+/*border-style 속성은 테두리 스타일을 지정하는 속성이다.(기본값은 none)
+
+none         테두리가 나타나지 않음
+hidden       테두리가 나타나지 않음(collapse 일 경우, 다른 테두리도 표시 되지 않음)
+dashed       테두리를 짧은 선으로 표시(직선으로 된 점선)
+dotted       테두리를 점선으로 표시
+double       테두리를 이중선(겹선)으로 표시(두 선 사이 간격은 border-width의 값으로 지정)
+groove       테두리를 창에 조각한 것처럼 표시(홈이 파인 듯 입체적으로 보임)
+inset        border-collapse: sepatate일 경우 전체 테두리가 창에 박혀 있는 것처럼 표시, collapse일 경우 groove와 동일
+outset                       //               전체 박스 테두리가 창에서 튀어나온 것처럼 표시, //   ridge와 동일
+ridge        테두리를 창에서 튀어나온 것처럼 표시
+solid        테두리를 실선으로 표시
+*/
+
+h1{
+    border-width: 10px;
+    border-width: thick thin;  /*위아래가 thick , 좌우가 thin 이다.*/
+    border-width: 1px 2px 3px 4px;
+}
+/*border-width는 테두리의 두께를 지정하는 속성이다. 종류로는 border-(top,right,left,bottom 중 택1)-width 가 있고, 단위는 크기(px), 키워드(thick,thin)
+
+만약 속성 2개를 선택하고 싶다면(위아래,좌우를 묶어 지정), 4개를 선택하고 싶다면 (top - right - bottom - left) 순으로 동시에 지정할 수 있다.
+*/
+
+h1{
+    border-color: black;
+    border-top-color: black;
+}
+/*위는 테두리 색상을 지정하는 속성이다. 종류로는 border-(top,left,right,bottom 중 택1)-color 가 있다. 가운데(top,right등)를 생략하면 전체가 같은 색*/
+
+
+h1{border: black solid 10px;}
+/*위처럼 한 번에 묶어서 지정할 수 있다.*/
+
+
+h1{
+    border-radius: 10%;
+    border-top-left-radius: 10px;
+    border-radius: 10px 20px 30px 40px;
+}
+/*위는 박스 모서리를 둥글게 만드는 속성이다. 속성값으로는 <크기(px,em)> , <백분율> 이 있다.
+만약 네 모서리를 각각 조절하고 싶다면 border-(top,bottom 중 택1) - (left,right 중 택1)-radius 를 사용하면 된다.
+
+한 번에 지정하려면 왼쪽 위부터 시계방향(왼위,오위,오아,왼아 순)으로 지정해주면 된다.
+*/
+
+
+h1{border-bottom-left-radius: 50px 100px;}
+/*위는 박스 모서리를 타원형으로 만드는 속성이다. 속성 값은 border-radius와 같다.*/
+
+
+h1{box-shadow: 2px 2px 2px 2px black;}
+/*위는 선택한 요소에 그림자 효과를 주는 속성이다. 두 개 이산의 그림사 사용시 쉽표로 구분하며(앞이 먼저 적용) , 속성 값으로는 순서대로 6가지가 있다.
+
+<수평 거리>   수평으로 얼마나 떨어져 있는지이다. 양수 값은 요소의 오른쪽, 음수 값은 왼쪽에 그림자를 만드는 필수 속성이다.
+<수직 거리>   수직으로 얼마나 떨어져 있는지이다. 양수 값은 요소의 아래쪽, 음수 값은 위쪽에 그림자를 만드는 필수 속성이다.
+<흐림 정도>   그림자의 흐림 정도를 지정한다.(기본은 0이며 이 값이 커질수록 부드러운 그림자를 표시하며 음수 값은 사용할 수 없다.)
+<번짐 정도>   그림자의 번지는 정도를 지정한다. 양수 값을 사용하면 그림자가 모든 방향으로 퍼져 나가 박스보다 크게 표시된다.(음수 값은 작게 표시)
+<색상>        그림자의 색상을 지정한다. 한가지만 지정할 수도 있고, 공백으로 구분해 여러 개의 색상을 지정할 수 있다.(기본값은 현재 글자색이다.)
+inset         이 키워드 사용시 안쪽 그림자로 그린다.
+*/
