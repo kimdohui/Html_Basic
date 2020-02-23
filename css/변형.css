@@ -1,0 +1,35 @@
+a{
+    transform: translate(100px,100px);  /*a라는 웹 요소를 x축으로 100px , y축으로 100px 이동시킨다*/
+    transform: rotate(40deg);  /*양수는 시계방향 음수는 반대방향으로 회전함*/
+}
+/*변형 함수로 이미지를 회전시키거나 이동하는 등 웹 요소를 변형할때 사용한다. 
+
+2차원 변형 함수
+
+translate(x,y)             지정한 크기만큼 x축 y축으로 이동함(y 지정 하지 않음 0으로 간주)
+translateX(x)              지정한 크기만큼 x축으로 이동
+translateY(y)              지정한 크기만큼 Y축으로 이동
+scale(x,y)                 지정한 크기만큼 X축과 Y축으로 확대/축소(y지정을 하지 않으면 x와 똑같다고 간주함)
+scaleX(x)                  지정한 크기만큼 X축으로 확대/축소
+scaleY(y)                  지정한 크기만큼 Y축으로 확대/측소
+rotate(각도)               지정한 각도만큼 회전(단위는 deg를 주로 사용하고(1deg = 1도) 
+skew(x,y)                  지정한 각도만큼 x축과 y축을 왜곡(y 지정하지 않음 0으로 간주)
+skewX(x)                   지정한 각도만큼 x축으로 왜곡
+skew(y)                    지정한 각도만큼 y축으로 왜곡
+*/
+
+a{transform: translate3d(100px,100px,100px);}
+/*
+3차원 변형 함수(과거 브라우저를 위해 접두사를 붙이는 것이 좋음)
+
+martric3d(n [,n])                              4*4 행렬을 이용해 이동과 확대/축소 , 회전 등의 변환을 지정함
+translate3d(x,y,z)                             지정한 크기만큼 x축,y축,z축으로 이동함
+translateZ(z)                                  지정한 크기만큼 z축으로 이동함
+scale3d(x,y,z)                                 지정한 크기만큼 x축 y축 z축으로 확대/축소 함
+scaleZ(z)                                      지정한 크기만큼 z축으로 확대/축소
+rotate3d(x,y,z,각도)                           지정한 각도만큼 회전
+rotateX(각도)                                  지정한 각도만큼 X축으로 회전
+rotateY(각도)                                  지정한 각도만큼 Y축으로 회전
+rotateZ(각도)                                  지정한 각도만큼 Z축으로 회전
+perspective(길이)                              입체적으로 보일 수 있는 깊이 값을 지정
+*/

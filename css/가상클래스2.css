@@ -1,0 +1,38 @@
+/*UI요소 상태에 따른 가상 클래스*/
+input:enabled{color: #000;}
+input:disabled{color: #000;}
+/*요소를 사용할 수 있을 때와 없을 때의 스타일을 지정하는 속성이다. 예를 들어 텍스트 필드를 게시판 입력 화면으로 사용하면 enable , 이용약관 등은 disable*/
+
+input :checked{color: #000;}
+/*라디오 박스나 체크 박스에서 해당 항목을 선택했을때 스타일을 지정하는 속성이다.*/
+
+
+
+
+/*구조 가상 클래스*/
+a:root{color: black;}
+/*문서 전체에 적용하는 속성이다. 문서 안의 루트 요소에 스타일을 적용한다. 예를 들어 HTML 문서에선는 루트 요소가 HTML이므로 HTML요소에 스타일 적용*/
+
+
+table tr:nth-child(n), table tr:nth-last-child(n)  /*n안에는 숫자 말고 odd,even,2n+1(홀수) 이런식이 적용되기도 함*/
+/*자식 요소 위치에 따라 스타일을 적용한다. 여러 개의 항목이 일렬로 정렬된 경우 id나 class대신 스타일 지정 요소가 몇 번째 있는지 따져 스타일 적용가능
+    :nth-child(n)은 앞에서부터 n번째 자식 요소에 스타일을 적용하고 :last-child(n)는 끝에서 n번째 자식 요소에 스타일을 적용한다.
+        - (단 위치에 따라 스타일을 적용하는 선택자는 해당 요소들이 모두 한 부모 요소를 가지고 있어야 한다. 즉 같은 레벨) 
+*/
+
+
+table li:nth-of-type(n) , table li:nth-last-of-type(n){color: black;}
+/*같은 태그가 여러 개 나열되있는 상태(class나id 사용x)에서 몇 번째 있는 <li> 태그처럼 몇번째 항목인지를 지정해 스타일을 적용할 때 사용(last는 끝이 기준)*/
+
+ul li:first-child , ul li:last-child{color: #000;}
+/*첫번째,마지막 자식 요소에 스타일을 적용한다.(예를들어 표의 끝을 둥글게 하려면 첫번,마지막 요소를 둥글게(border-radious)해주면 된다.*/
+
+
+p:first-of-type , p:last-of-type{color: black;}
+/*형제 관계 요소의 위치에 따라 스타일을 적용한다. 각각 첫번째,마지막 요소에 스타일을 지정한다. */
+
+
+p:only-child , p:only-of-type{color: #000;}
+/*하나뿐인 자식 요소에 스타일을 적용한다. :only-child는 자식 요소가 유일하게 하나일때 적용하고 , :only-of-type은 해당 요소가 유일한 요소일때 적용*/
+
+
