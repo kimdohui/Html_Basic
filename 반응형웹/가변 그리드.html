@@ -1,3 +1,7 @@
+<!--그리드 시스템이란 화면을 몇 개의 칼럼으로 나누어 요소들을 배치하는 것으로 필요할 때마다 칼럼들을 묶어 배치할 수 있다.
+    가변 그리드 레이아웃 : 사이트의 레이아웃을 백분율로 지정하는 것(브라우저의 너비값이 바뀔때마다 요소의 너비도 변함)
+-->
+
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -9,29 +13,29 @@
                 border: 1px solid #cccccc;
             }
             #container{
-                width: 960px;
-                padding: 20px;
+                width: 96%;   /*기존의 레이아웃과(960px사용) 다르게 %를 사용 / 백분율 공식 : (요소너비 / 전체 요소너비(여기선 960px) ) * 100 */
+                padding: 1%;
                 margin: 0 auto;
             }
             #header{
-                padding: 20px;
-                margin-bottom: 20px;
+                padding: 1%;
+                margin-bottom: 1%;
             }
             #contents{
-                width: 620px;
-                padding: 20px;
+                width: 62%;
+                padding: 1%;
                 float: left;
-                margin-bottom: 20px;
+                margin-bottom: 1%;
             }
             #sidebar{
-                width: 220px;
-                padding: 20px;
+                width: 32%;
+                padding: 1%;
                 float: right;
-                margin-bottom: 20px;
+                margin-bottom: 1%;
             }
             #footer{
                 clear: both;
-                padding: 20px;
+                padding: 1%;
             }
         </style>
     </head>
