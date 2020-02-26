@@ -1,0 +1,59 @@
+<!--미디어 쿼리란 css중 하나로 사이트에 접속하는 장치에 따라 특정한 css로 스타일을 변환하도록 한다. 참고 사이트 ->(http://mediaqueri.es)-->
+
+<style>
+    @media screen and(min-width: 100px) and(max-width: 200px){}  /*뷰보트의 너비가 100이상 200이하일때 적용*/
+
+
+/*위엔 기본 사용법으로 @media [only | not] 미디어 유형 [and(연산자) 조건] * [and(연산자) 조건] 으로 이루어 진다.
+
+사용할 수 있는 연산자
+
+and                    앞의 소스처럼 계속 추가 가능
+,(쉼표)                동일한 스타일 유형을 사용할 미디어의 유형과 조건이 있다면 쉼표를 이용해 추가
+only                   미디어 쿼리를 지원하는 웹 브라우저에서만 조건을 인식하게 함
+not                    not 다음에 지정하는 미디어 유형을 제외
+
+
+미디어 유형의 종류
+
+all          모든 미디어 유형
+print        인쇄 장치  
+screen       컴퓨터 스크린
+tv           음성과 영상이 동시 출력되는 tv
+breille      음성 합성 장치
+sural        점자 표시 장치
+handheld     패드처럼 손에 들고 다니는 장치
+projection   프로젝터
+tty          디스플레이 기능이 제한된 장치(픽셀 단위 사용할 수 없음)
+embossed     점자 프린터
+
+
+
+미디어 쿼리의 조건(뷰보트의 너비와 높이를 조건으로 사용할 수 있음)
+
+width,height                   웹 페이지의 가로 너비, 세로 높이
+min-width,min-height           최소 너비, 최소 높이 
+max-width,max-height           최대 너비, 최대 높이
+*/
+
+
+@media all and (min-device-width:100px) and (min-divice-height:500px) {}  /*단말기의 너비가 100 이상 높이가 500이상*/
+/*
+단말기의 가로 너비와 세로 높이
+
+divice-width,device-height                   단말기의 가로 너비, 세로 높이
+min-divice-width,min-divice-height           단말기의 최소 너비, 최소 높이 
+max-device-width,max-device-height           단말기의 최대 너비, 최대 높이
+*/
+
+
+@media screen and(orientation: landscape) {
+    body{background-color: pink;}
+}
+
+@media screen and(orientation: portrait) {
+    body{background-color: pink;}
+}
+
+/*화면 회전을 따르는 속성으로 orientation 속성을 사용해 화면 방향을 체크할 수 있다. 가로가 넓으면 landscape , 세로가 길면 portrait를 사용한다.*/
+</style>

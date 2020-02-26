@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" media="미디어 쿼리 조건(예/ screen and (max-width: 700px))" href="css 파일 경로"> <!--미디어 쿼리 연결볍 1-->
+
+    <style>
+        @import url("주소.css") only screen and (min-width:100px) and (max-width: 200px); /*미디어 쿼리 연결법 2(파일이 많아질 경우 <link> 사용 권유)*/
+
+        @media screen and (max-width:320px){
+            body{background-color: black;}             /*웹 문서에서 미디어 쿼리 정의 방법 1*/
+        }
+    </style>
+    
+<!-- 웹 문서에서 미디어 쿼리 정의 방법 2
+    <style media = "screen and (max-width:300px)">
+        body{color:blue;}
+    </style>
+-->
+    
+</head>
+<body>
+    
+</body>
+</html>

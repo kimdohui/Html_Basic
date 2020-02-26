@@ -1,0 +1,38 @@
+<style>
+
+@media all and(aspect-ratio: 16/9){}
+/*
+화면 비율을 사용하는 속성
+
+aspect-ratio                 화면 비율(width값 / height값)
+min-aspect-ratio             최소 화면 비율
+max-aspect-ratio             최대 화면 비율
+*/
+
+@media all and(device-aspect-ratio: 16/9){}
+/*
+단말기의 물리적 화면 비율
+
+device-aspect-ratio                 단말기 화면 비율(width값 / height값)
+device-min-aspect-ratio             단말기 최소 화면 비율
+device-max-aspect-ratio             단말기 최대 화면 비율
+*/
+
+
+@media all and (color){}           /*컬러를 지원하면 실행*/
+@media all and (color:0){}         /*컬러를 지원하지 않으면 실행*/
+@media all and (color:3){}         /*8비트 색상이라면 실행(color:1 당 2의 제곱으로 해당(즉 2면 4비트 , 3이면 8비트...)*/
+@media all and (min-color:3){}     /*8비트 이하 색상 이라면 실행*/
+
+/*색상 당 비트수를 쿼리 조건으로 사용할때 사용 속성으로는 color(비트수),min-color(최소 비트수),max-color(최대 비트수)가 있다.
+    - 자세한 설명은 http://www.w3.org/TR/css3-mediaqueries/ 참고
+*/
+
+
+@media only screen and(min-width: 320px){}   /*스마트폰 세로*/
+@media only screen and(min-width: 480px){}   /*스마트폰 가로*/
+@media only screen and(min-width: 7680px){}  /*태블릿 세로*/
+@media only screen and(min-width: 1024px){}  /*태블릿 가로 / 데스크톱*/
+
+/*미디어쿼리의 중단점(서로 다른 css를 적용할 화면의 크기)으로 조건에 따라 여러 중단점을 만들 수 있지만 크게 구분하면 위와 같은 중단점을 지정할 수 있다.*/
+</style>
